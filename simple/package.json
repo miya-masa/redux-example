@@ -1,0 +1,18 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "babel index.js --watch --out-file build.js",
+    "start": "node build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-preset-latest": "^6.16.0"
+  }
+}
