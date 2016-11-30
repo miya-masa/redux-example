@@ -1,5 +1,5 @@
 # 準備
 
 ```
-./gradlew bootRun
+./gradlew bootRun -Dfile.encoding=UTF-8
 ```
