@@ -17,3 +17,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * styles // css等
 
 
+# 準備
+
+```
+npm install
+npm start
+```
+
+http://localhost:3000/

@@ -8,3 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## reducer
 * reducerの結合
+
+
+# 準備
+
+```
+npm install
+npm start
+```
+
+http://localhost:3000/
