@@ -27,6 +27,7 @@ const sampleReducer = (previousState = initialState, action) => {
       return Object.assign({}, previousState, {
         b: previousState.b + 1
       });
+    default:
   }
   return previousState;
 };
