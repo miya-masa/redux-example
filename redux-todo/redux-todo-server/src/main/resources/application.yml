@@ -6,9 +6,6 @@ spring:
     show-sql: true
   datasource:
     platform: h2
-#  jackson:
-#    serialization:
-#      write-dates-as-timestamps: false
   h2:
     console:
       enabled: true

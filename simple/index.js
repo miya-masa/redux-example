@@ -9,8 +9,10 @@ const initialState = {
 }
 
 // reducerは変更がある場合は必ず新しいオブジェクトを返す！
+// previousState = initialStateはES6の文法である previousStateが undefined だったときに代入されるデフォルト値
 const sampleReducer = (previousState = initialState, action) => {
   switch (action.type) {
+    // action.typeを見て処理を判別
     case 'CHANGE_A':
       return Object.assign({}, previousState, {
         a: action.payload.value
@@ -35,8 +37,7 @@ const sampleReducer = (previousState = initialState, action) => {
 // Flux-storeの作成
 const store = createStore(sampleReducer);
 
-// 参照はOK。
-// 
+// Stateの参照はOK。
 const subscriber = () => {
   console.log(store.getState());
 };
@@ -45,6 +46,7 @@ const subscriber = () => {
 store.subscribe(subscriber);
 
 // アクション発行
+// actionCreatorではなく素のオブジェクトを渡す方式
 console.info('dispatch CHANGE_A');
 store.dispatch({
   type: 'CHANGE_A',

@@ -1,8 +1,9 @@
 import { CHANGE_A, CHANGE_B, CLEAR } from '../actions/';
+// ImmutableJSのインポート
 import Immutable from 'immutable';
 
 /**
- * 初期状態
+ * 初期状態(ImmutableJSのMap)
  */
 const initialState = Immutable.Map({
   a: 0,
@@ -15,6 +16,7 @@ const initialState = Immutable.Map({
 const sampleReducer = (previousState = initialState, action) => {
   switch (action.type) {
     case CHANGE_A:
+      // setメソッドは新しいオブジェクトを返却するので、"."つなぎで書ける
       return previousState.set('a', action.payload.value).set('errorA', action.payload.errorMessage);
     case CHANGE_B:
       return previousState.set('b', action.payload.value).set('errorB', action.payload.errorMessage);

@@ -11,12 +11,19 @@ const App = props => {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <form action="#" onSubmit={ (ev) => {
+        <form action="#"
+    onSubmit={(ev) => {
       ev.preventDefault();
       props.onSubmit(props)
     }}>
+      { // material のTextField 
+    }
         <TextField hintText="value a" name="valueA" floatingLabelText="VALUE A" value={props.textA} onChange={props.onChangeA} errorText={props.errorA} />
+      { // material のTextField 
+    }
         <TextField hintText="value b" name="valueB" floatingLabelText="VALUE B" value={props.textB} onChange={props.onChangeB} errorText={props.errorB} />
+      { // material のRaisedButton
+    }
         <RaisedButton label="Primary" primary={true} style={style} type="submit" />
         </form>
         <p>

@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import AppContainer from './containers/AppContainer';
-import reducers from './reducers/';
+import reducers from './reducers';
 import './styles/index.css';
 
+// FluxStoreを作成
 const store = createStore(reducers);
 
 ReactDOM.render(
